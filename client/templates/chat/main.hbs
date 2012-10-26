@@ -1,0 +1,15 @@
+<h3>Quick Chat Demo</h3>
+<h5>Open this page in multiple tabs or browsers and type a message below</h5>
+
+{{#with Chat.chatController }}
+  <div id="chatlog">
+  {{#each this id="chatlog"}}
+    {{#view Chat.MessageView messageBinding="this"}}
+      <span class="time">{{view.timestamp}}</span>
+      <span class="message">{{body}}</span>
+    {{/view}}
+  {{/each}}
+  </div>
+
+  {{view Chat.MessageField id="myMessage" valueBinding="text" autocomplete="off"}}
+{{/with}}

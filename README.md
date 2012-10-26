@@ -1,6 +1,15 @@
-# Welcome to your new realtime app
-=======
-socketstream-ember-demo-
-========================
+# Setup
 
-Ported the standard SocketStream chat demo to Ember.js. This should help those having difficulty getting off the ground with Ember.js for SocketStream.
+```
+$ git clone git@github.com:jeshuaborges/socketstream-ember-demo.git
+$ cd socketstream-ember-demo
+$ npm install
+$ node app.js
+```
+
+Demos:
+
+  * standard: http://localhost:3000/
+  * ember: http://localhost:3000/chat
+
+For fun, open one in opposing browsers and watch the messages flow between ember and vanilla jQuery.

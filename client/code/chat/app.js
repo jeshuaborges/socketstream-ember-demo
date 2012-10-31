@@ -58,6 +58,10 @@ Chat.MessageView = Ember.View.extend({
     this.set('timestamp', d.getHours() + ':' + this.pad2(d.getMinutes()) + ':' + this.pad2(d.getSeconds()))
   },
 
+  didInsertElement: function() {
+    $(this.get('element')).slideDown();
+  },
+
   pad2: function(number) {
     return (number < 10 ? '0' : '') + number;
   }
